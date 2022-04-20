@@ -1,0 +1,22 @@
+{
+  "name": "express_api",
+  "version": "1.0.0",
+  "description": "repo con la actividad 7 del curso de backend con node.js de launchx",
+  "main": "index.js",
+  "scripts": {
+    "test": "node --experimental-vm-modules ./node_modules/jest/bin/jest.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xian145/Express_api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xian145/Express_api/issues"
+  },
+  "homepage": "https://github.com/xian145/Express_api#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
