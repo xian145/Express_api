@@ -11,7 +11,7 @@ app.use(express.json())
 const port = 3000
 
 //http methods
-app.get('/v1/explorers', (req, res) => {
+app.get('/v1/explorers', (req, res) => { //al entrar a esta ruta, en la terminal se despliega un mensaje donde se dice que se consulto el api
     console.log(`Api explorers GET ALL request ${new Date()}`);
     const explorer1 = {id: 1, name: "Abraham"}
     const explorer2 = {id: 2, name: "Ariel"}
