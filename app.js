@@ -21,6 +21,14 @@ app.get('/v1/explorers', (req, res) => { //al entrar a esta ruta, en la terminal
     res.status(200).json(explorers)
 })
 
+//otro get
+app.get('/v1/explorers/:id', (req,res) => {
+    console.log(`Api Explorers GET request ${new Date()}`);
+    console.log(`Getting explorers with id ${req.params.id}`);
+    const explorer = {id: 1, name: "Abraham"}
+    req.status(200).json(explorer)
+})
+
 // Con esto inicializamos esta app (esto debe estar a lo ultimo?)
 app.listen(port, () => {
  console.log(`Example app listening on port ${port}`)
