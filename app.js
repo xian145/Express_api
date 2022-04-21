@@ -26,7 +26,7 @@ app.get('/v1/explorers/:id', (req,res) => {
     console.log(`Api Explorers GET request ${new Date()}`);
     console.log(`Getting explorers with id ${req.params.id}`);
     const explorer = {id: 1, name: "Abraham"}
-    req.status(200).json(explorer)
+    res.status(200).json(explorer)
 })
 
 // Con esto inicializamos esta app (esto debe estar a lo ultimo?)
