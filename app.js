@@ -1,4 +1,5 @@
 //usando objeto express
+const { application } = require('express')
 const express = require('express')
 
 //app de Express
@@ -30,10 +31,18 @@ app.get('/v1/explorers/:id', (req,res) => {
 })
 
 //endpoint que se encarga de crear un explorer
-app.post(`v1/explorers`, (req,res) => {
+app.post('v1/explorers', (req,res) => {
     console.log(`Api Explorers POST request ${new Date()}`);
     const requestBody = req.body //parametros de un cliente
     res.status(201).json({message: "created"})
+})
+
+//endpoint que se encarga de actualizar un explorer
+app.put('/v1/explorers/:id', (req,res) => {
+    console.log(`Api Eplorers PUT request ${new Date()}`);
+    console.log(`Update explorer with id ${req.params.id}`);
+    const requestBody = req.body //parametros de un cliente
+    res.status(200).json({message: 'updated!'})
 })
 
 // Con esto inicializamos esta app (esto debe estar a lo ultimo?)
