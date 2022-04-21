@@ -21,12 +21,19 @@ app.get('/v1/explorers', (req, res) => { //al entrar a esta ruta, en la terminal
     res.status(200).json(explorers)
 })
 
-//otro get
+//otro get, busca explorer por id
 app.get('/v1/explorers/:id', (req,res) => {
     console.log(`Api Explorers GET request ${new Date()}`);
     console.log(`Getting explorers with id ${req.params.id}`);
     const explorer = {id: 1, name: "Abraham"}
     res.status(200).json(explorer)
+})
+
+//endpoint que se encarga de crear un explorer
+app.post(`v1/explorers`, (req,res) => {
+    console.log(`Api Explorers POST request ${new Date()}`);
+    const requestBody = req.body //parametros de un cliente
+    res.status(201).json({message: "created"})
 })
 
 // Con esto inicializamos esta app (esto debe estar a lo ultimo?)
